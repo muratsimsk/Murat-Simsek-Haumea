@@ -2,6 +2,7 @@ body {
     background-color: rgb(232, 226, 213);
     color: darkslategrey;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
 }
 
 section {
@@ -44,6 +45,7 @@ nav a:hover {
 #Experiences {
     display: flex;
     flex-direction: column; /* Column layout */
+    align-items: center;
 }
 
 #Experiences .job {
@@ -53,6 +55,7 @@ nav a:hover {
 
 #Experiences p {
     margin: 10px 0; /* Spacing between job titles and descriptions */
+    align-items: center;
 }
 
 /* Flexbox for "Connect" section */
@@ -60,6 +63,7 @@ nav a:hover {
     display: flex;
     justify-content: space-around; /* Spread out links */
     align-items: center; /* Center-align items */
+    flex-direction: column;
 }
 
 #Connect a {
