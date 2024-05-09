@@ -1,0 +1,61 @@
+
+
+/* Styles for tablet*/
+@media (max-width: 768px) {
+    
+    h2 {
+        font-size: 25px;
+    }
+    
+    
+    nav ul {
+        flex-direction: column; 
+    }
+    
+    
+    section {
+        padding: 5px 0; /* Less padd */
+        margin-bottom: 5px; /* Less margin */
+    }
+    
+    
+    ul {
+        font-size: medium;
+    }
+}
+
+
+/*************/
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    
+    body {
+        font-size: smaller; 
+        
+    }
+    
+    section {
+        text-align: left;
+    }
+    
+    
+    
+    nav ul {
+        flex-direction: column; 
+        font-size: large;
+    }
+    
+    
+    #Connect {
+        font-size: medium; 
+    }
+    
+    
+    nav a {
+        color: darkred; 
+    }
+
+    
+
+}
