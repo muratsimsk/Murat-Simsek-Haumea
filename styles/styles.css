@@ -1,24 +1,76 @@
 body {
     background-color: rgb(232, 226, 213);
-    color:darkslategrey;
+    color: darkslategrey;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-    
-
+    text-align: center;
 }
 
 section {
     padding: 10px 0; /* Padding between sections */
-    margin-bottom: 10px 0; /* Margin below each section */
-
+    margin-bottom: 10px; /* Margin below each section */
 }
-h2{
+
+h2 {
     font-size: 30px;
     font-weight: bolder;
-    color: rgb(8, 79, 8);
-
-
+    color: rgb(8, 79, 8); /* Dark green for h2 headings */
 }
-ul{
-    font-style: italic; font-size: large; color: black
+
+ul {
+    font-style: italic;
+    font-size: large;
+    color: black;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Evenly spaced links in navigation */
+    padding: 0; /* No padding for the list */
+}
+
+nav a {
+    text-decoration: none;
+    color: darkslategrey;
+    font-weight: bold; /* Bold links */
+    font-size: x-large;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Flexbox for "Experiences" section */
+#Experiences {
+    display: flex;
+    flex-direction: column; /* Column layout */
+    align-items: center;
+}
+
+#Experiences .job {
+    display: flex;
+    justify-content: space-between; /* Title on the left, dates on the right */
+}
+
+#Experiences p {
+    margin: 10px 0; /* Spacing between job titles and descriptions */
+    align-items: center;
+}
+
+/* Flexbox for "Connect" section */
+#Connect {
+    display: flex;
+    justify-content: space-around; /* Spread out links */
+    align-items: center; /* Center-align items */
+    flex-direction: column;
+}
+
+#Connect a {
+    text-decoration: none;
+    color: #007bff; /* Blue links in the Connect section */
+}
+
+#Connect a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
