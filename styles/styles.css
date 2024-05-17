@@ -20,7 +20,11 @@ h2 {
 ul {
     font-style: italic;
     font-size: large;
-    color: black;
+    color: darklattegrey;
+    padding: 0; /* Remove default padding *
+    /* the points at the begining of skills was always on the left.
+    i couldnt bring it on the middle so removed padding ...*//
+
 }
 
 /* Navigation styles */
