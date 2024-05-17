@@ -36,4 +36,59 @@ mySkills.forEach(skill => {
 });
 
 
-//..........
+//.........assignment 14
+
+
+// Select the message form
+const messageForm = document.forms.leave_message;
+
+messageForm.addEventListener('submit', function(event) {
+    
+    event.preventDefault();
+    
+   
+    const name = messageForm.usersName.value;
+    const email = messageForm.usersEmail.value;
+    const message = messageForm.usersMessage.value;
+    
+    
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+    
+    
+    messageForm.reset(); //this clear the form after subm
+    
+    // Display messages in list
+    const messageSection = document.getElementById('messages');
+    const messageList = messageSection.querySelector('ul');
+    
+    // Create new message list item
+    const newMessage = document.createElement('li');
+    
+    // Set inner HTML of new message item
+    newMessage.innerHTML = 
+    `
+        <a href="mailto:${email}">${name}</a>: 
+        <span>${message}</span>`
+    ;
+    
+    // For creating a remove button
+    const removeButton = document.createElement('button');
+    removeButton.innerText = "remove";
+    removeButton.type = "button";
+    
+    //remove fu
+    removeButton.addEventListener('click', function() {
+        
+        newMessage.remove();
+    });
+    
+    // Append remove button to new message item
+    newMessage.appendChild(removeButton);
+    
+    // Append new message to message list
+    messageList.appendChild(newMessage);
+});
+
+
