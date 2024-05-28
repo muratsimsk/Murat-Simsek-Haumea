@@ -92,3 +92,31 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 
+///for assignment 15 fetch the github
+const projectSection = document.getElementById('Projects');
+const projectList = projectSection.querySelector('ul');
+
+fetch(`https://api.github.com/users/muratsimsk/repos`)
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("Something went wrong 😢");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    data.forEach(repo => {
+      const project = document.createElement("li");
+      const projectLink = document.createElement("a");
+      projectLink.href = repo.html_url; // Link to the repository
+      projectLink.innerText = repo.name; // Repository name as link text
+      projectLink.target = "_blank"; // Open in a new tab
+      project.appendChild(projectLink);
+      projectList.appendChild(project);
+    });
+  })
+  .catch((error) => {
+    const errorElement = document.createElement("p");
+    errorElement.innerText = error.message;
+    projectSection.appendChild(errorElement);
+  });
+  
