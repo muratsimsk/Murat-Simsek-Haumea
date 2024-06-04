@@ -7,78 +7,62 @@ body {
 }
 
 section {
-    padding: 10px 0; /* Padding between sections */
-    margin-bottom: 10px; /* Margin below each section */
+    padding: 10px 0;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 h2 {
     font-size: 30px;
     font-weight: bolder;
-    color: rgb(8, 79, 8); /* Dark green for h2 headings */
+    color: rgb(8, 79, 8);
 }
 
 ul {
-    font-style: italic;
     font-size: large;
-    color: darklattegrey;
-    padding: 0; /* Remove default padding *
-    /* the points at the begining of skills was always on the left.
-    i couldnt bring it on the middle so removed padding ...*//
-
+    color: darkslategrey;
+    padding: 0;
+    list-style-type: none;
 }
 
 /* Navigation styles */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* Evenly spaced links in navigation */
-    padding: 0; /* No padding for the list */
+    justify-content: space-around;
+    padding: 0;
 }
 
 nav a {
     text-decoration: none;
     color: darkslategrey;
-    font-weight: bold; /* Bold links */
+    font-weight: bold;
     font-size: x-large;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Flexbox for "Experiences" section */
-#Experiences {
-    display: flex;
-    flex-direction: column; /* Column layout */
-    align-items: center;
-}
-
-#Experiences .job {
-    display: flex;
-    justify-content: space-between; /* Title on the left, dates on the right */
-}
-
-#Experiences p {
-    margin: 10px 0; /* Spacing between job titles and descriptions */
-    align-items: center;
+    text-decoration: underline;
 }
 
 /* Flexbox for "Connect" section */
 #Connect {
     display: flex;
-    justify-content: space-around; /* Spread out links */
-    align-items: center; /* Center-align items */
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
 }
 
 #Connect a {
     text-decoration: none;
-    color: #007bff; /* Blue links in the Connect section */
+    color: #007bff;
 }
 
 #Connect a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
+
+/* Footer */
 footer {
     text-align: center;
     padding: 0;
@@ -86,4 +70,12 @@ footer {
     color: #cde0c7;
 }
 
+/* Projects section links */
+#Projects a {
+    text-decoration: none;
+    color: inherit; /* Inherit the color from the parent element */
+}
 
+#Projects a:hover {
+    text-decoration: underline;
+}
